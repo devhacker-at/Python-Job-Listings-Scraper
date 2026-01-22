@@ -31,5 +31,3 @@ Beautiful Soup (bs4) – to parse and navigate HTML
 
 CSV module – to save job listings
 
-What You Will Learn
-After completing this project, you will know how to inspect a webpage’s HTML, identify reusable patterns, and extract structured data using Python. You’ll practice working with third-party libraries, organizing scraped data, and exporting it for later analysis. This project also prepares you to move on to more advanced scraping tasks with pagination, filtering, and real-world websites.
