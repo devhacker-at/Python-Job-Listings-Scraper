@@ -1,1 +1,19 @@
-
+git import requests
+from bs4 import BeautifulSoup
+# Function to fetch HTML content
+def get_html(url):
+   response = requests.get(url)
+   return response.text
+# Function to parse job data
+def scrape_jobs(url):
+   html = get_html(url)
+   soup = BeautifulSoup(html, 'html.parser')
+   # Extract job titles
+   jobs = soup.find_all('a', class_='jobtitle turnstileLink')
+   for job in jobs:
+       print("Job Title:", job.text.strip())
+# Example: Scrape jobs from Indeed
+job = "data+scientist"
+location = "New+York"
+url = f"https://realpython.github.io/fake-jobs?q={job}&l={location}"
+scrape_jobs(url)
